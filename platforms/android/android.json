@@ -1,0 +1,42 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"NfcPlugin\"><param name=\"android-package\" value=\"com.kikiscene.nfc.reader.acr122u.NfcPlugin\" /></feature>",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.kikiscene.nfc.reader.acr122u.plugin": {
+            "PACKAGE_NAME": "com.kikiscene.nfc.reader.acr122u"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.kikiscene.nfc.reader.acr122u"
+        },
+        "cordova-plugin-nfc-acr122u": {
+            "PACKAGE_NAME": "com.kikiscene.nfc.reader.acr122u"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [],
+    "plugin_metadata": {
+        "com.kikiscene.nfc.reader.acr122u.plugin": "0.0.1",
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-plugin-nfc-acr122u": "0.0.1"
+    }
+}

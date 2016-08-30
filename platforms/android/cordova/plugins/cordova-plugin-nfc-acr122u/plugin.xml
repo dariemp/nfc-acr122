@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-nfc-acr122u"
+    version="0.0.1">
+    <name>NFC Plugin</name>
+    <description>Read IDs from ACR122U</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, nfc, acr122u</keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <engines>
+      <engine name="cordova-android" version=">=4.0.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="NfcPlugin" >
+                <param name="android-package" value="com.kikiscene.nfc.reader.acr122u.NfcPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/NfcPlugin.java" target-dir="src/com/kikiscene/nfc/reader/acr122u" />
+    </platform>
+
+</plugin>

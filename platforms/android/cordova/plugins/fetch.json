@@ -1,0 +1,10 @@
+{
+    "cordova-plugin-nfc-acr122u": {
+        "source": {
+            "type": "local",
+            "path": "plugins/cordova-plugin-nfc-acr122u"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

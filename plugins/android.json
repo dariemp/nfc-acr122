@@ -1,0 +1,19 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.kikiscene.nfc.reader.acr122u"
+        }
+    },
+    "dependent_plugins": {
+        "com.kikiscene.nfc.reader.acr122u.plugin": {
+            "PACKAGE_NAME": "com.kikiscene.nfc.reader.acr122u"
+        }
+    }
+}
