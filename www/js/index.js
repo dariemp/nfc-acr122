@@ -16,9 +16,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+ var nfc = {
+     addTagIdListener: function (success, failure) {
+         cordova.exec(success, failure, "NfcPlugin", "listen", []);
+     }
+ }
+
+
 var app = {
     // Application Constructor
     initialize: function() {
+        console.log('Cordova Initialize');
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -26,6 +35,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        console.log('Cordova Bind Events');
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
@@ -33,19 +43,24 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        console.log("Device Ready");
+
+        var success = function(result) {
+            if (result) {
+                //alert(result);
+                //navigator.notification.alert(result, function() {}, "NFC Tag ID");
+                tagIdDiv.innerHTML = result;
+            }
+        };
+
+        var failure = function(reason) {
+            alert ("Error " + JSON.stringify(reason))
+        };
+
+        console.log("Calling plugin");
+        nfc.addTagIdListener(success, failure);
+        console.log("Called plugin");
     },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
 };
 
 app.initialize();
