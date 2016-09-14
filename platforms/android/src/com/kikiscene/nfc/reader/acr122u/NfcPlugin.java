@@ -182,14 +182,18 @@ public class NfcPlugin extends CordovaPlugin  {
 
 
     @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray data, final CallbackContext callbackContext) throws JSONException {
 
         Log.d(TAG, "Execute " + action);
 
         // TODO call error callback if there is no reader
 
         if (action.equalsIgnoreCase(LISTEN)) {
-            listen(callbackContext);
+            getActivity().runOnUiThread(new Runnable() {
+                public void run() {
+                    listen(callbackContext);
+                }
+            });
         } else {
             // invalid action
             return false;
