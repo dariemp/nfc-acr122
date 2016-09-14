@@ -10,10 +10,14 @@
                     "/*": [
                         {
                             "xml": "<feature name=\"NfcPlugin\"><param name=\"android-package\" value=\"com.kikiscene.nfc.reader.acr122u.NfcPlugin\" /></feature>",
-                            "count": 2
+                            "count": 1
                         },
                         {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NfcIdPlugin\"><param name=\"android-package\" value=\"com.kikiscene.nfc.reader.acr122u.NfcIdPlugin\" /></feature>",
                             "count": 1
                         }
                     ]

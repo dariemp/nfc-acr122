@@ -31,7 +31,7 @@ import java.util.Map;
 // TODO handle no reader gracefully
 // TODO handle other USB devices
 
-public class NfcPlugin extends CordovaPlugin  {
+public class NfcIdPlugin extends CordovaPlugin  {
 
     private static final String TAG = "NfcPlugin";
 
